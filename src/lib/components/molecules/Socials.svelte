@@ -9,7 +9,7 @@
 
 <div class="socials">
 	<a
-		href="https://hachyderm.io/@rasel"
+		href="https://mastodon.social/@raselshikdar"
 		target="_blank"
 		rel="me noreferrer"
 		title="Say Hi on Mastodon"
@@ -33,10 +33,10 @@
 		<LinkedInIcon />
 	</a>
 	<a
-		href="mailto:info@rasel.work.gd"
+		href="mailto:info@rasel.us.kg"
 		target="_blank"
 		rel="noopener noreferrer"
-		title="Send an email to info@rasel.work.gd"
+		title="Send an email to info@rasel.us.kg"
 	>
 		<EmailIcon />
 	</a>

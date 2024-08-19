@@ -15,7 +15,7 @@
 <ul class="resume-contact">
 	<li class="birthday">
 		<span class="icon"><StarIcon /></span>
-		<span>{calculateYearsSince(new Date('1998-08-15'))} years old</span>
+		<span>{calculateYearsSince(new Date('1997-08-15'))} years old</span>
 	</li>
 	<li class="experience">
 		<span class="icon"><ExperienceIcon /></span>
@@ -29,7 +29,7 @@
 	</li>
 	<li class="email">
 		<span class="icon"><EmailIcon /></span>
-		<a href="mailto:info@rasel.work.gd">info@rasel.work.gd</a>
+		<a href="mailto:info@rasel.us.kg">info@rasel.us.kg</a>
 	</li>
 	<li class="linkedin">
 		<span class="icon"><LinkedInIcon /></span>
@@ -43,7 +43,7 @@
 	</li>
 	<li class="website">
 		<span class="icon"><InternetIcon /></span>
-		<a href="https://rasel.is-a.dev" target="_blank" rel="noopener noreferrer"> rasel.is-a.dev </a>
+		<a href="https://rasel.us.kg" target="_blank" rel="noopener noreferrer"> rasel.us.kg </a>
 	</li>
 	<li class="github">
 		<span class="icon"><GitHubIcon /></span>

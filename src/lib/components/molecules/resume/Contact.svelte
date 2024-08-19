@@ -15,7 +15,7 @@
 <ul class="resume-contact">
 	<li class="birthday">
 		<span class="icon"><StarIcon /></span>
-		<span>{calculateYearsSince(new Date('1997-08-15'))} years old</span>
+		<span>{calculateYearsSince(new Date('1998-08-15'))} years old</span>
 	</li>
 	<li class="experience">
 		<span class="icon"><ExperienceIcon /></span>

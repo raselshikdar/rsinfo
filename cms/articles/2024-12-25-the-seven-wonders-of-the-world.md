@@ -7,6 +7,7 @@ excerpt: >-
 coverImage: /images/8700fd5e-360f-4f68-bbbf-5bf9744bf5c7.avif
 coverImageAlt: the-seven-wonders-of-the-world
 showImage: true
+socialImage: /images/8700fd5e-360f-4f68-bbbf-5bf9744bf5c7.avif
 showToc: true
 categories:
   - General
@@ -14,7 +15,7 @@ categories:
 date: 2024-12-25T07:04:39.217Z
 ---
 
-![](/images/8700fd5e-360f-4f68-bbbf-5bf9744bf5c7.avif "Image Source: AI")
+![](/images/8700fd5e-360f-4f68-bbbf-5bf9744bf5c7.avif "Image Source: AI")Image Source: AI
 
 ## সপ্তাশ্চর্য কি?
 

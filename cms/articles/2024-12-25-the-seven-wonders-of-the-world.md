@@ -4,7 +4,7 @@ slug: the-seven-wonders-of-the-world
 excerpt: >-
   আজকে আমরা কথা বলতে যাচ্ছি বিশ্বের সপ্তাশ্চর্য নিয়ে যা প্রজন্মের পর প্রজন্ম
   ধরে মানুষের মধ্যে কৌতূহলের সৃষ্টি করেছে। আজ সেই ইতিহাস সম্পর্কে জানব।
-coverImage: /images/compressed_image (1).jpg
+coverImage: /images/8700fd5e-360f-4f68-bbbf-5bf9744bf5c7.avif
 coverImageAlt: the-seven-wonders-of-the-world.jpg
 showImage: true
 showToc: true
@@ -24,13 +24,13 @@ author: "Author Name"  # Replace with the actual author's name
 
 tags: \["সপ্তাশ্চর্য", "ঐতিহাসিক", "স্থাপত্য"]
 
-coverImage: "https\://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiGVe6o7wwuWvXdX5gf7KWYAUK-uYRwU82lgaye8h5U\_a7Rvb038YhNT1mwhikyR4EnI9v62oAh4uyAmfSJBScyJygsEangOk2CdBbPIPONMUtMBCh3glDdgx-D\_rv9O-XpZwDKlB8dPDS-UpNABpISeoTtRBQrjjcI-fhsrfQ6yhqDLy6Q7S1VZz59bDc/s1600/ai-generated-8189056\_1280.webp"
+coverImage: "[https://assets.tina.io/c9d362ca-3731-47f8-830c-703d19dc8e8b/8700fd5e-360f-4f68-bbbf-5bf9744bf5c7.avif](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiGVe6o7wwuWvXdX5gf7KWYAUK-uYRwU82lgaye8h5U_a7Rvb038YhNT1mwhikyR4EnI9v62oAh4uyAmfSJBScyJygsEangOk2CdBbPIPONMUtMBCh3glDdgx-D_rv9O-XpZwDKlB8dPDS-UpNABpISeoTtRBQrjjcI-fhsrfQ6yhqDLy6Q7S1VZz59bDc/s1600/ai-generated-8189056_1280.webp)"
 
 \---
 
-!\[বিশ্বের সপ্তাশ্চর্য]\(https\://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiGVe6o7wwuWvXdX5gf7KWYAUK-uYRwU82lgaye8h5U\_a7Rvb038YhNT1mwhikyR4EnI9v62oAh4uyAmfSJBScyJygsEangOk2CdBbPIPONMUtMBCh3glDdgx-D\_rv9O-XpZwDKlB8dPDS-UpNABpISeoTtRBQrjjcI-fhsrfQ6yhqDLy6Q7S1VZz59bDc/s1600/ai-generated-8189056\_1280.webp)
+!\[বিশ্বের সপ্তাশ্চর্য]\([https://assets.tina.io/c9d362ca-3731-47f8-830c-703d19dc8e8b/8700fd5e-360f-4f68-bbbf-5bf9744bf5c7.avif](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiGVe6o7wwuWvXdX5gf7KWYAUK-uYRwU82lgaye8h5U_a7Rvb038YhNT1mwhikyR4EnI9v62oAh4uyAmfSJBScyJygsEangOk2CdBbPIPONMUtMBCh3glDdgx-D_rv9O-XpZwDKlB8dPDS-UpNABpISeoTtRBQrjjcI-fhsrfQ6yhqDLy6Q7S1VZz59bDc/s1600/ai-generated-8189056_1280.webp))
 
-\<center>Image Source: \[Pixabay]\(https\://pixabay.com/illustrations/ai-generated-paris-eiffel-tower-8189056/)\</center>
+\<center>Image Source: \[Pixabay]\([https://pixabay.com/illustrations/ai-generated-paris-eiffel-tower-8189056/)\</center](https://pixabay.com/illustrations/ai-generated-paris-eiffel-tower-8189056/\)%3C/center)>
 
 \## সপ্তাশ্চর্য কি?
 

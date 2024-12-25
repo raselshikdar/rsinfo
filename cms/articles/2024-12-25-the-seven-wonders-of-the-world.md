@@ -4,10 +4,10 @@ slug: the-seven-wonders-of-the-world
 excerpt: >-
   আজকে আমরা কথা বলতে যাচ্ছি বিশ্বের সপ্তাশ্চর্য নিয়ে যা প্রজন্মের পর প্রজন্ম
   ধরে মানুষের মধ্যে কৌতূহলের সৃষ্টি করেছে। আজ সেই ইতিহাস সম্পর্কে জানব।
-coverImage: /images/posts/Rs Blog/pyramid.webp
+coverImage: /images/posts/rsblog/pyramid.webp
 coverImageAlt: Pyramid
 showImage: true
-socialImage: /images/posts/Rs Blog/pyramid.webp
+socialImage: /images/posts/rs-blog/pyramid.webp
 showToc: true
 categories:
   - General

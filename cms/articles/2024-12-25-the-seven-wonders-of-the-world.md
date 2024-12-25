@@ -4,8 +4,8 @@ slug: the-seven-wonders-of-the-world
 excerpt: >-
   আজকে আমরা কথা বলতে যাচ্ছি বিশ্বের সপ্তাশ্চর্য নিয়ে যা প্রজন্মের পর প্রজন্ম
   ধরে মানুষের মধ্যে কৌতূহলের সৃষ্টি করেছে। আজ সেই ইতিহাস সম্পর্কে জানব।
-coverImage: /images/7-wonders-of-the-world.avif
-coverImageAlt: the-seven-wonders-of-the-world.avif
+coverImage: /images/compressed_image (1).jpg
+coverImageAlt: the-seven-wonders-of-the-world.jpg
 showImage: true
 showToc: true
 categories:
@@ -16,9 +16,9 @@ date: 2024-12-25T07:04:39.217Z
 
 \# বিশ্বের সপ্তাশ্চর্য
 
-!\[Eiffel Tower]\(https\://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiGVe6o7wwuWvXdX5gf7KWYAUK-uYRwU82lgaye8h5Ua7Rvb038YhNT1mwhikyR4EnI9v62oAh4uyAmfSJBScyJygsEangOk2CdBbPIPONMUtMBCh3glDdgx-Drv9O-XpZwDKlB8dPDS-UpNABpISeoTtRBQrjjcI-fhsrfQ6yhqDLy6Q7S1VZz59bDc/s1600/ai-generated-81890561280.webp)
+!\[Eiffel Tower]\([https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiGVe6o7wwuWvXdX5gf7KWYAUK-uYRwU82lgaye8h5Ua7Rvb038YhNT1mwhikyR4EnI9v62oAh4uyAmfSJBScyJygsEangOk2CdBbPIPONMUtMBCh3glDdgx-Drv9O-XpZwDKlB8dPDS-UpNABpISeoTtRBQrjjcI-fhsrfQ6yhqDLy6Q7S1VZz59bDc/s1600/ai-generated-81890561280.webp](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiGVe6o7wwuWvXdX5gf7KWYAUK-uYRwU82lgaye8h5Ua7Rvb038YhNT1mwhikyR4EnI9v62oAh4uyAmfSJBScyJygsEangOk2CdBbPIPONMUtMBCh3glDdgx-Drv9O-XpZwDKlB8dPDS-UpNABpISeoTtRBQrjjcI-fhsrfQ6yhqDLy6Q7S1VZz59bDc/s1600/ai-generated-81890561280.webp))
 
-\*Image Source: \[Pixabay]\(https\://pixabay.com/illustrations/ai-generated-paris-eiffel-tower-8189056/)\*
+\*Image Source: \[Pixabay]\([https://pixabay.com/illustrations/ai-generated-paris-eiffel-tower-8189056/)\*](https://pixabay.com/illustrations/ai-generated-paris-eiffel-tower-8189056/\)*)
 
 \## সপ্তাশ্চর্য কি?
 

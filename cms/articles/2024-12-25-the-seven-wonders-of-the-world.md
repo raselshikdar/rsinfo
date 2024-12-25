@@ -14,9 +14,7 @@ categories:
 date: 2024-12-25T07:04:39.217Z
 ---
 
-## coverImage: "https\://assets.tina.io/c9d362ca-3731-47f8-830c-703d19dc8e8b/8700fd5e-360f-4f68-bbbf-5bf9744bf5c7.avif"
-
-Image Source: Pixabay
+![](/images/8700fd5e-360f-4f68-bbbf-5bf9744bf5c7.avif "Image Source: AI")
 
 ## সপ্তাশ্চর্য কি?
 

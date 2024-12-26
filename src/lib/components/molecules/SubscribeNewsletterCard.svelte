@@ -26,7 +26,7 @@
 			</div>
 
 			<form
-				action="https://buttondown.com/api/emails/embed-subscribe/fantinel"
+				action="https://buttondown.com/api/emails/embed-subscribe/rsblog.us.kg"
 				method="post"
 				target="popupwindow"
 			>

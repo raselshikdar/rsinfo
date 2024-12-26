@@ -36,7 +36,13 @@
 								</svg>
 							</a>
 						</p>
-						<p class="note"><i>{dateformat(post.date, 'UTC:dddd, dd mmm yyyy, h:MM TT')}</i></p> <p class="note"><i>- {post.readingTime}</i></p>
+						<p class="administrator-note">(Administrator)</p>
+						<p class="note">
+							<i>
+								{dateformat(post.date, 'UTC:dddd, dd mmm yyyy, h:MM TT')} - 
+								<span class="reading-time">{post.readingTime}</span>
+							</i>
+						</p>
 						{#if post.updated}
 							<p class="note"><i>Updated {dateformat(post.updated, 'UTC:dddd, dd mmm yyyy, h:MM TT')}</i></p>
 						{/if}
@@ -109,6 +115,12 @@
 			.details {
 				display: flex;
 				flex-direction: column;
+
+				.administrator-note {
+					margin: 4px 0;
+					font-size: 0.85em;
+					color: rgba(var(--color--text-rgb), 0.6);
+				}
 			}
 		}
 
@@ -126,6 +138,10 @@
 					display: inline-block;
 					vertical-align: middle;
 				}
+			}
+
+			.reading-time {
+				color: red;
 			}
 		}
 	}
@@ -159,10 +175,6 @@
 				max-height: 100%;
 				object-fit: cover;
 				width: 100%;
-
-				// Currently Chromium-only: https://caniuse.com/mdn-css_properties_animation-timeline
-				animation: parallax-effect linear;
-				animation-timeline: scroll(block);
 
 				@keyframes parallax-effect {
 					0% {

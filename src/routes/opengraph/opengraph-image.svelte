@@ -26,7 +26,7 @@
 					alt="Domain"
 					style="width: 24px; height: 24px;"
 				/>
-				<span>fantinel.dev</span>
+				<span>rsblog.us.kg</span>
 			</div>
 			<div id="date" style:color={date ? 'inherit' : 'transparent'}>
 				{date ?? 'DD Mon YYYY'}

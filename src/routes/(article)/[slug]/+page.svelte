@@ -208,7 +208,8 @@
 					}
 					25% {
 						object-position: center;
-									50% {
+					}
+					50% {
 						object-position: bottom;
 					}
 				}

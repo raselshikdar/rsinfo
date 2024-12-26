@@ -35,11 +35,10 @@
 									<path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm-1.1 14.7-3.6-3.6 1.4-1.4 2.2 2.2 5.2-5.2 1.4 1.4z" />
 								</svg>
 							</a>
-							<small>(Admin)</small>
 						</p>
-						<p class="note"><i>{dateformat(post.date, 'UTC:dd mmm yyyy')} - {post.readingTime}</i></p>
+						<p class="note"><i>{dateformat(post.date, 'UTC:dddd, dd mmm yyyy, h:MM TT')} - {post.readingTime}</i></p>
 						{#if post.updated}
-							<p class="note"><i>Updated {dateformat(post.updated, 'UTC:dd mmm yyyy')}</i></p>
+							<p class="note"><i>Updated {dateformat(post.updated, 'UTC:dddd, dd mmm yyyy, h:MM TT')}</i></p>
 						{/if}
 					</div>
 				</div>

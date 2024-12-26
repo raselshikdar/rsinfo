@@ -118,6 +118,10 @@ export default defineConfig({
               'SEO',
               'Review',
               'Cyber Security',
+              'Politics',
+              'Bangladesh',
+              'Diplomacy',
+              'Geo-Politics',
             ],
           },
           {

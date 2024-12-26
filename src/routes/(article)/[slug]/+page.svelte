@@ -20,7 +20,19 @@
 						alt="Rasel Shikdar"
 					/>
 					<div class="details">
-						<p class="note">By <a href="/resume"><b>Rasel Shikdar</b></a> <small>(Admin)</small></p>
+						<p class="note">
+							By <a href="/resume"><b>Rasel Shikdar</b></a>
+							<svg 
+								xmlns="http://www.w3.org/2000/svg" 
+								viewBox="0 0 24 24" 
+								fill="#1da1f2" 
+								width="16" 
+								height="16" 
+								style="vertical-align: middle; margin-left: 4px;"
+							>
+								<path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm-1.1 14.7-3.6-3.6 1.4-1.4 2.2 2.2 5.2-5.2 1.4 1.4z" />
+							</svg>
+						</p>
 						<p class="note"><i>{dateformat(post.date, 'UTC:dd mmm yyyy')} - {post.readingTime}</i></p>
 						{#if post.updated}
 							<p class="note"><i>Updated {dateformat(post.updated, 'UTC:dd mmm yyyy')}</i></p>

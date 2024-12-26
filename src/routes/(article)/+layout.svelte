@@ -7,8 +7,9 @@
 	import TableOfContents from '$lib/components/organisms/TableOfContents.svelte';
 	import dateformat from 'dateformat';
 
+	import SubscribeNewsletterCard from '$lib/components/molecules/SubscribeNewsletterCard.svelte';
 	import type BlogPost from '$lib/data/blog-posts/model';
-	import { keywords, siteBaseUrl, title, image as metaImage } from '$lib/data/meta';
+	import { keywords, image as metaImage, siteBaseUrl, title } from '$lib/data/meta';
 
 	export let data: { post: BlogPost };
 	$: ({ post } = data);
@@ -46,25 +47,19 @@
 
 		<meta name="description" content={post.excerpt} />
 		<meta property="og:description" content={post.excerpt} />
-		<meta name="twitter:description" content={post.excerpt} />
 		<link rel="canonical" href="{siteBaseUrl}/{post.slug}" />
 
 		<title>{post.title} - {title}</title>
 		<meta property="og:title" content="{post.title} - {title}" />
-		<meta name="twitter:title" content="{post.title} - {title}" />
 
 		{#if post.socialImage?.src}
 			<meta property="og:image" content="{siteBaseUrl}{post.socialImage.src}" />
-			<meta name="twitter:image" content="{siteBaseUrl}{post.socialImage.src}" />
 		{:else if post.coverImage?.src}
 			<meta property="og:image" content="{siteBaseUrl}{post.coverImage.src}" />
-			<meta name="twitter:image" content="{siteBaseUrl}{post.coverImage.src}" />
 		{:else if genericSocialImageUrl}
 			<meta property="og:image" content={genericSocialImageUrl} />
-			<meta name="twitter:image" content={genericSocialImageUrl} />
 		{:else}
 			<meta property="og:image" content={metaImage} />
-			<meta name="twitter:image" content={metaImage} />
 		{/if}
 	{/if}
 </svelte:head>
@@ -98,6 +93,10 @@
 				{#if post.showToc}
 					<TableOfContents />
 				{/if}
+			</div>
+
+			<div class="container subscribe-container">
+				<SubscribeNewsletterCard />
 			</div>
 
 			{#if post.relatedPosts && post.relatedPosts.length > 0}
@@ -257,6 +256,20 @@
 			top: max(700px, calc(75% - var(--size)));
 			left: -10%;
 			animation-duration: 10s;
+		}
+	}
+
+	.subscribe-container {
+		margin: 40px auto 20px;
+		max-width: 85ch;
+		box-sizing: content-box;
+
+		:global(.subscribe-card) {
+			background: linear-gradient(
+				120deg,
+				rgba(var(--color--primary-rgb), 0.15) 0%,
+				rgba(var(--color--primary-rgb), 0.05) 100%
+			);
 		}
 	}
 

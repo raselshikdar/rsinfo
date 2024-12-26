@@ -36,7 +36,7 @@
 								</svg>
 							</a>
 						</p>
-						<p class="note"><i>{dateformat(post.date, 'UTC:dddd, dd mmm yyyy, h:MM TT')} - {post.readingTime}</i></p>
+						<p class="note"><i>{dateformat(post.date, 'UTC:dddd, dd mmm yyyy, h:MM TT')}</i></p> <p class="note"><i>- {post.readingTime}</i></p>
 						{#if post.updated}
 							<p class="note"><i>Updated {dateformat(post.updated, 'UTC:dddd, dd mmm yyyy, h:MM TT')}</i></p>
 						{/if}

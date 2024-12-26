@@ -21,20 +21,20 @@
 					/>
 					<div class="details">
 						<p class="note">
-									<a href="/resume" class="author-name">
-										<b>Rasel Shikdar</b>
-										<svg 
-											xmlns="http://www.w3.org/2000/svg" 
-											viewBox="0 0 24 24" 
-											fill="#1da1f2" 
-											width="16" 
-											height="16" 
-											class="verification-badge"
-										>
-											<path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm-1.1 14.7-3.6-3.6 1.4-1.4 2.2 2.2 5.2-5.2 1.4 1.4z" />
-										</svg>
-									</a>
-								</p>
+							<a href="/resume" class="author-name">
+								<b>Rasel Shikdar</b>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 24 24"
+									fill="#1da1f2"
+									width="16"
+									height="16"
+									class="verification-badge"
+								>
+									<path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm-1.1 14.7-3.6-3.6 1.4-1.4 2.2 2.2 5.2-5.2 1.4 1.4z" />
+								</svg>
+							</a>
+						</p>
 						<p class="note">{dateformat(post.date, 'UTC:dd mmm yyyy, h:MM TT')} - {post.readingTime}</p>
 						{#if post.updated}
 							<p class="note">Updated {dateformat(post.updated, 'UTC:dd mmm yyyy, h:MM TT')}</p>
@@ -110,6 +110,17 @@
 				flex-direction: column;
 			}
 		}
+
+		.author-name {
+			display: inline-flex;
+			align-items: center;
+			gap: 5px;
+
+			.verification-badge {
+				margin-left: 5px;
+			}
+		}
+
 		.note {
 			font-size: 80%;
 			color: rgba(var(--color--text-rgb), 0.8);
@@ -146,10 +157,6 @@
 				max-height: 100%;
 				object-fit: cover;
 				width: 100%;
-
-				// Currently Chromium-only: https://caniuse.com/mdn-css_properties_animation-timeline
-				animation: parallax-effect linear;
-				animation-timeline: scroll(block);
 
 				@keyframes parallax-effect {
 					0% {

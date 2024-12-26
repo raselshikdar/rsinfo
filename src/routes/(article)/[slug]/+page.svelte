@@ -14,38 +14,41 @@
 			{#if post}
 				<h1 style={`view-transition-name: title-${post.slug}`}>{post.title}</h1>
 				<div class="meta">
-					<img
-						class="author-photo"
-						src="https://1.gravatar.com/avatar/55420fb619c1de81ce4a02676320d39306b6a592663750877dd55047f45d9067?size=512"
-						alt="Rasel Shikdar"
-					/>
-					<div class="details">
-						<p class="note">
-							By 
-							<a href="/resume" class="author-name">
-								<b>Rasel Shikdar</b>
-								<svg 
-									xmlns="http://www.w3.org/2000/svg" 
-									viewBox="0 0 24 24" 
-									fill="#1da1f2" 
-									width="16" 
-									height="16" 
-									class="verification-badge"
-								>
-									<path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm-1.1 14.7-3.6-3.6 1.4-1.4 2.2 2.2 5.2-5.2 1.4 1.4z" />
-								</svg>
-							</a>
-						</p>
-						<p class="administrator-note">(Administrator)</p>
-						<p class="note">
-							<i>
-								{dateformat(post.date, 'UTC:dddd, dd mmm yyyy, h:MM TT')} - 
-								<span class="reading-time">{post.readingTime}</span>
-							</i>
-						</p>
-						{#if post.updated}
-							<p class="note"><i>Updated {dateformat(post.updated, 'UTC:dddd, dd mmm yyyy, h:MM TT')}</i></p>
-						{/if}
+					<div class="author-card">
+						<div class="author-info">
+							<img
+								class="author-photo"
+								src="https://1.gravatar.com/avatar/55420fb619c1de81ce4a02676320d39306b6a592663750877dd55047f45d9067?size=512"
+								alt="Rasel Shikdar"
+							/>
+							<div class="author-details">
+								<p class="note">
+									<a href="/resume" class="author-name">
+										<b>Rasel Shikdar</b>
+										<svg 
+											xmlns="http://www.w3.org/2000/svg" 
+											viewBox="0 0 24 24" 
+											fill="#1da1f2" 
+											width="16" 
+											height="16" 
+											class="verification-badge"
+										>
+											<path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm-1.1 14.7-3.6-3.6 1.4-1.4 2.2 2.2 5.2-5.2 1.4 1.4z" />
+										</svg>
+									</a>
+								</p>
+								<p class="administrator-note">(Administrator)</p>
+								<p class="note">
+									<i>
+										{dateformat(post.date, 'UTC:dddd, dd mmm yyyy, h:MM TT')} - 
+										<span class="reading-time">{post.readingTime}</span>
+									</i>
+								</p>
+								{#if post.updated}
+									<p class="note"><i>Updated {dateformat(post.updated, 'UTC:dddd, dd mmm yyyy, h:MM TT')}</i></p>
+								{/if}
+							</div>
+						</div>
 					</div>
 				</div>
 				{#if post.categories?.length || post.tags?.length}
@@ -100,48 +103,71 @@
 
 		.meta {
 			display: flex;
-			align-items: center;
-			gap: 10px;
+			justify-content: center;
+			width: 100%;
 			padding: 15px 0;
+		}
 
-			.author-photo {
-				width: 50px;
-				height: 50px;
-				border-radius: 50%;
-				object-fit: cover;
-				margin: 0;
-			}
+		.author-card {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			background: #f9f9f9;
+			border-radius: 10px;
+			box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+			padding: 20px;
+			width: 100%;
+			max-width: 500px;
+			margin: 0 auto;
+		}
 
-			.details {
-				display: flex;
-				flex-direction: column;
+		.author-info {
+			display: flex;
+			align-items: center;
+			gap: 20px;
+			width: 100%;
+		}
 
-				.administrator-note {
-					margin: 4px 0;
-					font-size: 0.85em;
-					color: rgba(var(--color--text-rgb), 0.6);
-				}
-			}
+		.author-photo {
+			width: 80px;
+			height: 80px;
+			border-radius: 50%;
+			object-fit: cover;
+			border: 2px solid #e0e0e0;
+		}
+
+		.author-details {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			text-align: left;
+		}
+
+		.administrator-note {
+			font-size: 0.85em;
+			color: rgba(var(--color--text-rgb), 0.6);
+			margin: 5px 0;
 		}
 
 		.note {
 			font-size: 80%;
 			color: rgba(var(--color--text-rgb), 0.8);
 			margin: 0;
+		}
 
-			.author-name {
-				display: inline-flex;
-				align-items: center;
-				gap: 4px;
+		.reading-time {
+			color: red;
+		}
 
-				.verification-badge {
-					display: inline-block;
-					vertical-align: middle;
-				}
-			}
+		.author-name {
+			display: inline-flex;
+			align-items: center;
+			gap: 4px;
 
-			.reading-time {
-				color: red;
+			.verification-badge {
+				display: inline-block;
+				vertical-align: middle;
 			}
 		}
 	}

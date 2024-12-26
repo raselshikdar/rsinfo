@@ -9,20 +9,8 @@
 	<Sparkles>
 		<SubscribeCard>
 			<div class="card-content">
-				<h2>I have a newsletter!</h2>
-				<p>
-					I'm starting a newsletter as another way to share what I write on this blog. The main goal
-					is to be able to reach people who don't use RSS or just prefer getting their articles
-					delivered straight into their inbox.
-				</p>
-				<ul>
-					<li>No fixed frequency, but <em>at least once at month</em>;</li>
-					<li>
-						I do not plan on having content exclusive to the newsletter. Everything on it will also
-						be on the blog;
-					</li>
-					<li><strong>I will never, ever ever ever, send you any form of spam.</strong></li>
-				</ul>
+				<h2>Newsletter!</h2>
+				<strong>Will never send you any form of spam messages.</strong>
 			</div>
 
 			<form

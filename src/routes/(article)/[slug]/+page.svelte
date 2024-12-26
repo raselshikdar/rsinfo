@@ -208,8 +208,7 @@
 					}
 					25% {
 						object-position: center;
-					}
-					50% {
+									50% {
 						object-position: bottom;
 					}
 				}
@@ -223,5 +222,29 @@
 		justify-content: center;
 		gap: 5px;
 		flex-wrap: wrap;
+	}
+
+	/* Dark Mode Styles */
+	@media (prefers-color-scheme: dark) {
+		.author-card {
+			background: #2c2c2c; /* Dark background */
+			box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+		}
+
+		.author-photo {
+			border: 2px solid #444; /* Lighter border for dark mode */
+		}
+
+		.author-name {
+			color: #f9f9f9; /* Light color for the author's name */
+		}
+
+		.administrator-note, .note {
+			color: rgba(255, 255, 255, 0.8); /* Light text for dark mode */
+		}
+
+		.reading-time {
+			color: #ff6347; /* Adjust reading time color for dark mode */
+		}
 	}
 </style>

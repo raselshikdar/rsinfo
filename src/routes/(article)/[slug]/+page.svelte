@@ -123,7 +123,7 @@
 		}
 
 		.role {
-			font-size: 70%; /* Small font for Administrator role */
+			font-size: 85%; /* Small font for Administrator role */
 			color: #1da1f2;
 			font-weight: normal;
 		}

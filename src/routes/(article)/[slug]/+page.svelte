@@ -120,6 +120,12 @@
 			width: 100%;
 			max-width: 500px;
 			margin: 0 auto;
+
+			@media (prefers-color-scheme: dark) {
+				background: #333;
+				color: white;
+				box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+			}
 		}
 
 		.author-info {
@@ -135,6 +141,10 @@
 			border-radius: 50%;
 			object-fit: cover;
 			border: 2px solid #e0e0e0;
+
+			@media (prefers-color-scheme: dark) {
+				border-color: #444;
+			}
 		}
 
 		.author-details {
@@ -148,16 +158,28 @@
 			font-size: 0.85em;
 			color: rgba(var(--color--text-rgb), 0.6);
 			margin: 5px 0;
+
+			@media (prefers-color-scheme: dark) {
+				color: rgba(255, 255, 255, 0.6);
+			}
 		}
 
 		.note {
 			font-size: 80%;
 			color: rgba(var(--color--text-rgb), 0.8);
 			margin: 0;
+
+			@media (prefers-color-scheme: dark) {
+				color: rgba(255, 255, 255, 0.8);
+			}
 		}
 
 		.reading-time {
 			color: red;
+
+			@media (prefers-color-scheme: dark) {
+				color: orange;
+			}
 		}
 
 		.author-name {
@@ -208,7 +230,8 @@
 					}
 					25% {
 						object-position: center;
-									50% {
+					}
+					50% {
 						object-position: bottom;
 					}
 				}
@@ -222,29 +245,5 @@
 		justify-content: center;
 		gap: 5px;
 		flex-wrap: wrap;
-	}
-
-	/* Dark Mode Styles */
-	@media (prefers-color-scheme: dark) {
-		.author-card {
-			background: #2c2c2c; /* Dark background */
-			box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
-		}
-
-		.author-photo {
-			border: 2px solid #444; /* Lighter border for dark mode */
-		}
-
-		.author-name {
-			color: #f9f9f9; /* Light color for the author's name */
-		}
-
-		.administrator-note, .note {
-			color: rgba(255, 255, 255, 0.8); /* Light text for dark mode */
-		}
-
-		.reading-time {
-			color: #ff6347; /* Adjust reading time color for dark mode */
-		}
 	}
 </style>

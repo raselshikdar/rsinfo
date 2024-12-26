@@ -114,10 +114,9 @@
 		.author-name {
 			display: inline-flex;
 			align-items: center;
-			gap: 5px;
 
 			.verification-badge {
-				margin-left: 5px;
+				margin-left: 2px;
 			}
 		}
 

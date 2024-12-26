@@ -21,14 +21,17 @@
 					/>
 					<div class="details">
 						<p class="note">
-							By <a href="/resume"><b>Rasel Shikdar</b></a>
+							By 
+							<a href="/resume" class="author-name">
+								<b>Rasel Shikdar</b>
+							</a>
 							<svg 
 								xmlns="http://www.w3.org/2000/svg" 
 								viewBox="0 0 24 24" 
 								fill="#1da1f2" 
 								width="16" 
 								height="16" 
-								style="vertical-align: middle; margin-left: 4px;"
+								class="verification-badge"
 							>
 								<path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm-1.1 14.7-3.6-3.6 1.4-1.4 2.2 2.2 5.2-5.2 1.4 1.4z" />
 							</svg>
@@ -108,10 +111,22 @@
 				flex-direction: column;
 			}
 		}
+
 		.note {
 			font-size: 80%;
 			color: rgba(var(--color--text-rgb), 0.8);
 			margin: 0;
+
+			.author-name {
+				display: inline-flex;
+				align-items: center;
+				gap: 4px;
+
+				.verification-badge {
+					display: inline-block;
+					vertical-align: middle;
+				}
+			}
 		}
 	}
 

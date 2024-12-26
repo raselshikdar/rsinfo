@@ -19,7 +19,7 @@
 						src="https://1.gravatar.com/avatar/55420fb619c1de81ce4a02676320d39306b6a592663750877dd55047f45d9067?size=512"
 						alt="Rasel Shikdar"
 					/>
-					<div class="details">
+					<div class="author-card">
 						<p class="note">
 							By 
 							<a href="/resume" class="author-name">
@@ -105,16 +105,25 @@
 			padding: 15px 0;
 
 			.author-photo {
-				width: 50px;
-				height: 50px;
+				width: 70px;
+				height: 70px;
 				border-radius: 50%;
 				object-fit: cover;
 				margin: 0;
+				border: 2px solid #e0e0e0;
 			}
 
-			.details {
+			.author-card {
 				display: flex;
 				flex-direction: column;
+				justify-content: center;
+				padding: 15px;
+				border-radius: 10px;
+				background: #f9f9f9;
+				box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+				width: 100%;
+				max-width: 450px;
+				margin-left: 20px;
 
 				.administrator-note {
 					margin: 4px 0;

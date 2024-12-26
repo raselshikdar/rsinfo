@@ -23,7 +23,6 @@
 							/>
 							<div class="author-details">
 								<p class="note">
-									By 
 									<a href="/resume" class="author-name">
 										<b>Rasel Shikdar</b>
 										<svg 

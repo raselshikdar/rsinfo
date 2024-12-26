@@ -34,6 +34,8 @@
 									<path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm-1.1 14.7-3.6-3.6 1.4-1.4 2.2 2.2 5.2-5.2 1.4 1.4z" />
 								</svg>
 							</a>
+							<br />
+							<span class="role">(Administrator!)</span>
 						</p>
 						<p class="note">{dateformat(post.date, 'UTC:dd mmm yyyy, h:MM TT')} - {post.readingTime}</p>
 						{#if post.updated}
@@ -118,6 +120,12 @@
 			.verification-badge {
 				margin-left: 2px;
 			}
+		}
+
+		.role {
+			font-size: 70%; /* Small font for Administrator role */
+			color: #1da1f2;
+			font-weight: normal;
 		}
 
 		.note {

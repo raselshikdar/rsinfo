@@ -13,7 +13,6 @@ const config = {
           // Ignore 404 errors for images (as they're likely not optimized yet at build time)
           return;
         }
-        // Handle other HTTP errors if necessary
       }
     }
   },

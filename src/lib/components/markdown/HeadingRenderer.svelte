@@ -3,6 +3,7 @@
 	import LinkIcon from '$lib/icons/link.svelte';
 	import { copy } from '@svelte-put/copy';
 	import { marked } from 'marked';
+	import Markdown from '../molecules/Markdown.svelte';
 
 	export let text: string;
 	export let level: number;
@@ -18,7 +19,7 @@
 </script>
 
 <svelte:element this={element} id={slug}>
-	{text}
+	<Markdown content={text} isInline />
 
 	<a
 		class="heading-link"

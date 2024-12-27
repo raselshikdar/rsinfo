@@ -10,7 +10,7 @@
 	import SubscribeNewsletterCard from '$lib/components/molecules/SubscribeNewsletterCard.svelte';
 	import type BlogPost from '$lib/data/blog-posts/model';
 	import { keywords, image as metaImage, siteBaseUrl, title } from '$lib/data/meta';
-import Giscus from '@giscus/svelte';
+        import Giscus from '@giscus/svelte';
 
 	export let data: { post: BlogPost };
 	$: ({ post } = data);

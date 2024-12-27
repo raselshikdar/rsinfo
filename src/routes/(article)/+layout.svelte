@@ -10,7 +10,7 @@
 	import SubscribeNewsletterCard from '$lib/components/molecules/SubscribeNewsletterCard.svelte';
 	import type BlogPost from '$lib/data/blog-posts/model';
 	import { keywords, image as metaImage, siteBaseUrl, title } from '$lib/data/meta';
-	import Giscus from '@giscus/svelte'; // Import Giscus
+import Giscus from '@giscus/svelte';
 
 	export let data: { post: BlogPost };
 	$: ({ post } = data);
@@ -88,15 +88,21 @@
 						<slot slot="content" />
 					</Card>
 				{:else}
-					<div style="overflow: hidden;">
-						<slot />
-						<div class="giscus mt-8">
+					<div style="overflow: hidden;"><slot /></div>
+				{/if}
+
+				{#if post.showToc}
+					<TableOfContents />
+				{/if}
+			</div>
+
+<div class="giscus mt-8">
 							<Giscus
 								id="comments"
-								repo="xKesvaL/kesval.com"
-								repoId="R_kgDOJLg2dQ"
+								repo="raselshikdar/rsinfo"
+								repoId="R_kgDOMEUUZA"
 								category="Comments"
-								categoryId="DIC_kwDOJLg2dc4Cfd7h"
+								categoryId="DIC_kwDOMEUUZM4ClhwM"
 								mapping="title"
 								term="Welcome to @giscus/react component!"
 								reactionsEnabled="1"
@@ -107,13 +113,6 @@
 								loading="lazy"
 							/>
 						</div>
-					</div>
-				{/if}
-
-				{#if post.showToc}
-					<TableOfContents />
-				{/if}
-			</div>
 
 			<div class="container subscribe-container">
 				<SubscribeNewsletterCard />
@@ -275,55 +274,30 @@
 			--size: 440px;
 			top: max(700px, calc(75% - var(--size)));
 			left: -10%;
-			animation-duration: 12s;
+			animation-duration: 10s;
 		}
 	}
 
-	@keyframes float {
-		0% {
-			transform: translateY(0) translateX(0);
-		}
-		50% {
-			transform: translateY(-10px) translateX(10px);
-		}
-		100% {
-			transform: translateY(0) translateX(0);
+	.subscribe-container {
+		margin: 40px auto 20px;
+		max-width: 85ch;
+		box-sizing: content-box;
+
+		:global(.subscribe-card) {
+			background: linear-gradient(
+				120deg,
+				rgba(var(--color--primary-rgb), 0.15) 0%,
+				rgba(var(--color--primary-rgb), 0.05) 100%
+			);
 		}
 	}
 
-	.container {
-		margin: 0 auto;
+	:global(.article-card) {
+		max-width: 85ch;
+	}
+
+	:global(.article-card .wrapper .body) {
+		padding: 0;
 		width: 100%;
-		padding-inline: var(--inline-padding);
-		margin-top: 40px;
-
-		@include for-tablet-portrait-up {
-			max-width: 720px;
-		}
-
-		@include for-desktop-up {
-			max-width: 1080px;
-		}
-
-		.subscribe-container {
-			margin-top: 60px;
-		}
-	}
-
-	.giscus {
-		margin-top: 40px;
-
-		@include for-tablet-landscape-up {
-			margin-top: 60px;
-		}
-	}
-
-	:global(.blob) {
-		filter: blur(120px);
-		opacity: 0.5;
-
-		@include for-tablet-landscape-up {
-			filter: blur(80px);
-		}
 	}
 </style>

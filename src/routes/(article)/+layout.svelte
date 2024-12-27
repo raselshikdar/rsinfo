@@ -89,30 +89,28 @@
 					</Card>
 				{:else}
 					<div style="overflow: hidden;"><slot /></div>
+<div class="giscus mt-8"></div>
+		<Giscus
+			id="comments"
+			repo="xKesvaL/kesval.com"
+			repoId="R_kgDOJLg2dQ"
+			category="Comments"
+			categoryId="DIC_kwDOJLg2dc4Cfd7h"
+			mapping="title"
+			term="Welcome to @giscus/react component!"
+			reactionsEnabled="1"
+			emitMetadata="1"
+			inputPosition="top"
+			theme={$theme === 'dark' ? 'dark' : $theme === 'auto' ? 'preferred_color_scheme' : 'light'}
+			lang={languageTag()}
+			loading="lazy"
+		/>
+	</div>
 				{/if}
 
 				{#if post.showToc}
 					<TableOfContents />
 				{/if}
-			</div>
-
-			<!-- Giscus Comment Section -->
-			<div class="container giscus-container">
-				<Giscus
-					id="giscus-comments"
-					repo="owner/repo-name"
-					repo-id="your-repo-id"
-					category="General"
-					category-id="your-category-id"
-					mapping="pathname"
-					strict="0"
-					reactions-enabled="1"
-					emit-metadata="0"
-					input-position="bottom"
-					theme="light"
-					lang="en"
-					loading="lazy"
-				/>
 			</div>
 
 			<div class="container subscribe-container">

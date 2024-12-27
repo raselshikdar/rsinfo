@@ -1,3 +1,4 @@
+<!-- src/lib/components/molecules/Giscus.svelte -->
 <script lang="ts">
   import { Giscus } from '@giscus/svelte';
 

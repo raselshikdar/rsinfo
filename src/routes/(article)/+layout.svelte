@@ -10,6 +10,7 @@
 	import SubscribeNewsletterCard from '$lib/components/molecules/SubscribeNewsletterCard.svelte';
 	import type BlogPost from '$lib/data/blog-posts/model';
 	import { keywords, image as metaImage, siteBaseUrl, title } from '$lib/data/meta';
+	import Giscus from '@giscus/svelte'; // Import Giscus component
 
 	export let data: { post: BlogPost };
 	$: ({ post } = data);
@@ -44,11 +45,9 @@
 <svelte:head>
 	{#if post}
 		<meta name="keywords" content={metaKeywords.join(', ')} />
-
 		<meta name="description" content={post.excerpt} />
 		<meta property="og:description" content={post.excerpt} />
 		<link rel="canonical" href="{siteBaseUrl}/{post.slug}" />
-
 		<title>{post.title} - {title}</title>
 		<meta property="og:title" content="{post.title} - {title}" />
 
@@ -58,7 +57,7 @@
 			<meta property="og:image" content="{siteBaseUrl}{post.coverImage.src}" />
 		{:else if genericSocialImageUrl}
 			<meta property="og:image" content={genericSocialImageUrl} />
-		{:else}
+ {:else}
 			<meta property="og:image" content={metaImage} />
 		{/if}
 	{/if}
@@ -93,6 +92,25 @@
 				{#if post.showToc}
 					<TableOfContents />
 				{/if}
+			</div>
+
+			<!-- Giscus Comment Section -->
+			<div class="giscus mt-8">
+				<Giscus
+					id="comments"
+					repo="raselshikdar/rsinfo"
+					repoId="R_kgDOMEUUZA"
+					category="Comments"
+					categoryId="DIC_kwDOMEUUZM4ClhwM"
+					mapping="title"
+					term="Welcome to @giscus/react component!"
+					reactionsEnabled="1"
+					emitMetadata="1"
+					inputPosition="top"
+					theme={$theme === 'dark' ? 'dark' : $theme === 'auto' ? 'preferred_color_scheme' : 'light'}
+					lang={languageTag()} <!-- Ensure this function returns a valid language code -->
+					loading="lazy"
+				/>
 			</div>
 
 			<div class="container subscribe-container">
@@ -188,7 +206,7 @@
 
 		&.has-cover {
 			padding-top: 200px;
-			padding-inline: 0;
+			padding -inline: 0;
 
 			:global(.article-card) {
 				padding-inline: var(--inline-padding);
@@ -212,6 +230,10 @@
 		:global(.table-of-contents) {
 			flex: 0 0 240px;
 		}
+	}
+
+	.giscus {
+		margin: 40px 0; // Add margin for spacing
 	}
 
 	.background-blurrer {

@@ -17,6 +17,7 @@
 		"postbuild": "npm run optimize-images && svelte-sitemap --out-dir .vercel/output/static --domain https://rsinfo.vercel.app"
 	},
 	"devDependencies": {
+		"@giscus/svelte": "^3.0.0",
 		"@histoire/plugin-svelte": "^0.17.14",
 		"@resvg/resvg-js": "^2.6.2",
 		"@svelte-put/copy": "^3.0.0",

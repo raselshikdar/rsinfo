@@ -1,284 +1,291 @@
 <script lang="ts">
-	import Card from '$lib/components/atoms/Card.svelte';
-	import Image from '$lib/components/atoms/Image.svelte';
-	import Footer from '$lib/components/organisms/Footer.svelte';
-	import Header from '$lib/components/organisms/Header.svelte';
-	import RelatedPosts from '$lib/components/organisms/RelatedPosts.svelte';
-	import TableOfContents from '$lib/components/organisms/TableOfContents.svelte';
-	import dateformat from 'dateformat';
+  import Card from '$lib/components/atoms/Card.svelte';
+  import Image from '$lib/components/atoms/Image.svelte';
+  import Footer from '$lib/components/organisms/Footer.svelte';
+  import Header from '$lib/components/organisms/Header.svelte';
+  import RelatedPosts from '$lib/components/organisms/RelatedPosts.svelte';
+  import TableOfContents from '$lib/components/organisms/TableOfContents.svelte';
+  import dateformat from 'dateformat';
+  
+  import SubscribeNewsletterCard from '$lib/components/molecules/SubscribeNewsletterCard.svelte';
+  import type BlogPost from '$lib/data/blog-posts/model';
+  import { keywords, image as metaImage, siteBaseUrl, title } from '$lib/data/meta';
+  import Giscus from '$lib/components/molecules/Giscus.svelte';
 
-	import SubscribeNewsletterCard from '$lib/components/molecules/SubscribeNewsletterCard.svelte';
-	import type BlogPost from '$lib/data/blog-posts/model';
-	import { keywords, image as metaImage, siteBaseUrl, title } from '$lib/data/meta';
+  export let data: { post: BlogPost };
+  $: ({ post } = data);
 
-	export let data: { post: BlogPost };
-	$: ({ post } = data);
+  $: showCardLayout = Boolean(post?.showImage && post?.coverImage?.src);
 
-	$: showCardLayout = Boolean(post?.showImage && post?.coverImage?.src);
+  let metaKeywords = keywords;
+  let genericSocialImageUrl: string | undefined;
 
-	let metaKeywords = keywords;
-	let genericSocialImageUrl: string | undefined;
+  $: {
+    if (post?.categories?.length) {
+      metaKeywords = post.categories.concat(metaKeywords);
+    }
+    if (post?.tags?.length) {
+      metaKeywords = post.tags.concat(metaKeywords);
+    }
+    if (post?.keywords?.length) {
+      metaKeywords = post.keywords.concat(metaKeywords);
+    }
 
-	$: {
-		if (post?.categories?.length) {
-			metaKeywords = post.categories.concat(metaKeywords);
-		}
-		if (post?.tags?.length) {
-			metaKeywords = post.tags.concat(metaKeywords);
-		}
-		if (post?.keywords?.length) {
-			metaKeywords = post.keywords.concat(metaKeywords);
-		}
-
-		if (post) {
-			genericSocialImageUrl = `${siteBaseUrl}/opengraph?text=${encodeURIComponent(post.title)}`;
-			if (post.date) {
-				genericSocialImageUrl += `&date=${encodeURIComponent(
-					dateformat(post.date, 'mmm dd, yyyy')
-				)}`;
-			}
-		}
-	}
+    if (post) {
+      genericSocialImageUrl = `${siteBaseUrl}/opengraph?text=${encodeURIComponent(post.title)}`;
+      if (post.date) {
+        genericSocialImageUrl += `&date=${encodeURIComponent(
+          dateformat(post.date, 'mmm dd, yyyy')
+        )}`;
+      }
+    }
+  }
 </script>
 
 <svelte:head>
-	{#if post}
-		<meta name="keywords" content={metaKeywords.join(', ')} />
-
-		<meta name="description" content={post.excerpt} />
-		<meta property="og:description" content={post.excerpt} />
-		<link rel="canonical" href="{siteBaseUrl}/{post.slug}" />
-
-		<title>{post.title} - {title}</title>
-		<meta property="og:title" content="{post.title} - {title}" />
-
-		{#if post.socialImage?.src}
-			<meta property="og:image" content="{siteBaseUrl}{post.socialImage.src}" />
-		{:else if post.coverImage?.src}
-			<meta property="og:image" content="{siteBaseUrl}{post.coverImage.src}" />
-		{:else if genericSocialImageUrl}
-			<meta property="og:image" content={genericSocialImageUrl} />
-		{:else}
-			<meta property="og:image" content={metaImage} />
-		{/if}
-	{/if}
+  {#if post}
+    <meta name="keywords" content={metaKeywords.join(', ')} />
+    <meta name="description" content={post.excerpt} />
+    <meta property="og:description" content={post.excerpt} />
+    <link rel="canonical" href="{siteBaseUrl}/{post.slug}" />
+    <title>{post.title} - {title}</title>
+    <meta property="og:title" content="{post.title} - {title}" />
+    {#if post.socialImage?.src}
+      <meta property="og:image" content="{siteBaseUrl}{post.socialImage.src}" />
+    {:else if post.coverImage?.src}
+      <meta property="og:image" content="{siteBaseUrl}{post.coverImage.src}" />
+    {:else if genericSocialImageUrl}
+      <meta property="og:image" content={genericSocialImageUrl} />
+    {:else}
+      <meta property="og:image" content={metaImage} />
+    {/if}
+  {/if}
 </svelte:head>
 
 {#if post}
-	<div class="article-layout" class:has-cover={showCardLayout}>
-		{#if showCardLayout && post.coverImage}
-			<div class="cover-image-wrapper">
-				<Image
-					additionalClass="cover-image"
-					src={`${post.coverImage.src}`}
-					alt={post.coverImage.alt}
-					lazy={false}
-				/>
-				<div class="cover-image-overlay" />
-			</div>
-		{/if}
+  <div class="article-layout" class:has-cover={showCardLayout}>
+    {#if showCardLayout && post.coverImage}
+      <div class="cover-image-wrapper">
+        <Image
+          additionalClass="cover-image"
+          src={`${post.coverImage.src}`}
+          alt={post.coverImage.alt}
+          lazy={false}
+        />
+        <div class="cover-image-overlay" />
+      </div>
+    {/if}
 
-		<Header />
+    <Header />
 
-		<main class="article-main" class:has-cover={showCardLayout}>
-			<div class="article-content-wrapper" class:card-layout={showCardLayout}>
-				{#if showCardLayout}
-					<Card additionalClass="article-card">
-						<slot slot="content" />
-					</Card>
-				{:else}
-					<div style="overflow: hidden;"><slot /></div>
-				{/if}
+    <main class="article-main" class:has-cover={showCardLayout}>
+      <div class="article-content-wrapper" class:card-layout={showCardLayout}>
+        {#if showCardLayout}
+          <Card additionalClass="article-card">
+            <slot slot="content" />
+          </Card>
+        {:else}
+          <div style="overflow: hidden;"><slot /></div>
+        {/if}
 
-				{#if post.showToc}
-					<TableOfContents />
-				{/if}
-			</div>
+        {#if post.showToc}
+          <TableOfContents />
+        {/if}
+      </div>
 
-			<div class="container subscribe-container">
-				<SubscribeNewsletterCard />
-			</div>
+      <div class="container subscribe-container">
+        <SubscribeNewsletterCard />
+      </div>
 
-			{#if post.relatedPosts && post.relatedPosts.length > 0}
-				<div class="container">
-					<RelatedPosts posts={post.relatedPosts} />
-				</div>
-			{/if}
+      {#if post.relatedPosts && post.relatedPosts.length > 0}
+        <div class="container">
+          <RelatedPosts posts={post.relatedPosts} />
+        </div>
+      {/if}
 
-			{#if !showCardLayout}
-				<div class="background-blurrer" />
-				<div class="blob one" />
-				<div class="blob two" />
-				<div class="blob three" />
-			{/if}
-		</main>
+      {#if !showCardLayout}
+        <div class="background-blurrer" />
+        <div class="blob one" />
+        <div class="blob two" />
+        <div class="blob three" />
+      {/if}
 
-		<Footer />
-	</div>
+      <Giscus
+        repo="raselshikdar/rsinfo"
+        repoId="R_kgDOMEUUZA"
+        category="General"
+        categoryId="DIC_kwDOMEUUZM4ClhwM"
+        term={post.slug}
+      />
+    </main>
+
+    <Footer />
+  </div>
 {/if}
 
 <style lang="scss">
-	@import '$lib/scss/_mixins.scss';
+  @import '$lib/scss/_mixins.scss';
 
-	.article-layout {
-		--body-background-color: var(--color--post-page-background);
-		--body-background-color-rgb: var(--color--post-page-background-rgb);
-		background-color: var(--body-background-color);
+  .article-layout {
+    --body-background-color: var(--color--post-page-background);
+    --body-background-color-rgb: var(--color--post-page-background-rgb);
+    background-color: var(--body-background-color);
 
-		&.has-cover {
-			--body-background-color: var(--color--page-background);
-			--body-background-color-rgb: var(--color--page-background-rgb);
+    &.has-cover {
+      --body-background-color: var(--color--page-background);
+      --body-background-color-rgb: var(--color--page-background-rgb);
 
-			:global(.article-card) {
-				background-color: var(--color--post-card-background);
-			}
-		}
-	}
+      :global(.article-card) {
+        background-color: var(--color--post-card-background);
+      }
+    }
+  }
 
-	.cover-image-wrapper {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 60vh;
+  .cover-image-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60vh;
 
-		:global(img.cover-image) {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-		}
-	}
+    :global(img.cover-image) {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
 
-	.cover-image-overlay {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 60vh;
-		background-image: linear-gradient(
-			to bottom,
-			var(--body-background-color) 0%,
-			rgba(var(--body-background-color-rgb), 0) 100%
-		);
-	}
+  .cover-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60vh;
+    background-image: linear-gradient(
+      to bottom,
+      var(--body-background-color) 0%,
+      rgba(var(--body-background-color-rgb), 0) 100%
+    );
+  }
 
-	.article-main {
-		min-height: 55vh;
-		overflow-x: clip;
+  .article-main {
+    min-height: 55vh;
+    overflow-x: clip;
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 80px;
+    --inline-padding: 20px;
+    padding-inline: var(--inline-padding);
+    isolation: isolate;
 
-		position: relative;
-		padding-top: 40px;
-		padding-bottom: 80px;
-		--inline-padding: 20px;
-		padding-inline: var(--inline-padding);
+    @include for-iphone-se {
+      --inline-padding: 0;
+    }
 
-		isolation: isolate;
+    @include for-tablet-portrait-up {
+      --inline-padding: 25px;
+    }
 
-		@include for-iphone-se {
-			--inline-padding: 0;
-		}
+    @include for-tablet-landscape-up {
+      --inline-padding: 30px;
+    }
 
-		@include for-tablet-portrait-up {
-			--inline-padding: 25px;
-		}
+    &.has-cover {
+      padding-top: 200px;
+      padding-inline: 0;
 
-		@include for-tablet-landscape-up {
-			--inline-padding: 30px;
-		}
+      :global(.article-card) {
+        padding-inline: var(--inline-padding);
+      }
+    }
+  }
 
-		&.has-cover {
-			padding-top: 200px;
-			padding-inline: 0;
+  .article-content-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: var(--inline-padding);
 
-			:global(.article-card) {
-				padding-inline: var(--inline-padding);
-			}
-		}
-	}
+    &.card-layout {
+      padding-inline: var(--inline-padding);
 
-	.article-content-wrapper {
-		display: flex;
-		justify-content: center;
-		gap: var(--inline-padding);
+      @include for-phone-only {
+        padding-inline: 0;
+      }
+    }
 
-		&.card-layout {
-			padding-inline: var(--inline-padding);
+    :global(.table-of-contents) {
+      flex: 0 0 240px;
+    }
+  }
 
-			@include for-phone-only {
-				padding-inline: 0;
-			}
-		}
+  .background-blurrer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(var(--body-background-color-rgb), 0.7);
+    z-index: -1;
+    -webkit-backdrop-filter: blur(100px);
+    backdrop-filter: blur(100px);
+  }
 
-		:global(.table-of-contents) {
-			flex: 0 0 240px;
-		}
-	}
+  .blob {
+    position: absolute;
+    animation: float 2s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+    animation-fill-mode: both;
+    background: var(--color--primary-shade);
+    z-index: -2;
+    --size: 400px;
+    height: var(--size);
+    width: var(--size);
 
-	.background-blurrer {
-		position: absolute;
-		top: 0;
-		left: 0;
-		height: 100%;
-		width: 100%;
-		background: rgba(var(--body-background-color-rgb), 0.7);
-		z-index: -1;
-		-webkit-backdrop-filter: blur(100px);
-		backdrop-filter: blur(100px);
-	}
-	.blob {
-		position: absolute;
-		animation: float 2s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
-		animation-fill-mode: both;
-		background: var(--color--primary-shade);
-		z-index: -2;
-		--size: 400px;
-		height: var(--size);
-		width: var(--size);
+    &.one {
+      border-radius: var(--radius-blob-1);
+      top: max(600px, calc(15% - var(--size)));
+      left: 10%;
+      animation-duration: 10s;
+    }
 
-		&.one {
-			border-radius: var(--radius-blob-1);
-			top: max(600px, calc(15% - var(--size)));
-			left: 10%;
-			animation-duration: 10s;
-		}
-		&.two {
-			background: var(--color--secondary-shade);
-			border-radius: var(--radius-blob-2);
-			--size: 420px;
-			top: max(600px, calc(45% - var(--size)));
-			left: 70%;
-			animation-duration: 10s;
-			opacity: 0.8;
-		}
-		&.three {
-			border-radius: var(--radius-blob-3);
-			--size: 440px;
-			top: max(700px, calc(75% - var(--size)));
-			left: -10%;
-			animation-duration: 10s;
-		}
-	}
+    &.two {
+      background: var(--color--secondary-shade);
+      border-radius: var(--radius-blob-2);
+      --size: 420px;
+      top: max(600px, calc(45% - var(--size)));
+      left: 70%;
+      animation-duration: 10s;
+      opacity: 0.8;
+    }
 
-	.subscribe-container {
-		margin: 40px auto 20px;
-		max-width: 85ch;
-		box-sizing: content-box;
+    &.three {
+      border-radius: var(--radius-blob-3);
+      --size: 440px;
+      top: max(700px, calc(75% - var(--size)));
+      left: -10%;
+      animation-duration: 10s;
+    }
+  }
 
-		:global(.subscribe-card) {
-			background: linear-gradient(
-				120deg,
-				rgba(var(--color--primary-rgb), 0.15) 0%,
-				rgba(var(--color--primary-rgb), 0.05) 100%
-			);
-		}
-	}
+  .subscribe-container {
+    margin: 40px auto 20px;
+    max-width: 85ch;
+    box-sizing: content-box;
 
-	:global(.article-card) {
-		max-width: 85ch;
-	}
+    :global(.subscribe-card) {
+      background: linear-gradient(
+        120deg,
+        rgba(var(--color--primary-rgb), 0.15) 0%,
+        rgba(var(--color--primary-rgb), 0.05) 100%
+      );
+    }
+  }
 
-	:global(.article-card .wrapper .body) {
-		padding: 0;
-		width: 100%;
-	}
+  :global(.article-card) {
+    max-width: 85ch;
+  }
+
+  :global(.article-card .wrapper .body) {
+    padding: 0;
+    width: 100%;
+  }
 </style>

@@ -9,9 +9,9 @@
   import dateformat from 'dateformat';
 
   import SubscribeNewsletterCard from '$lib/components/molecules/SubscribeNewsletterCard.svelte';
+  import Giscus from '$lib/components/molecules/Giscus.svelte';
   import type BlogPost from '$lib/data/blog-posts/model';
   import { keywords, image as metaImage, siteBaseUrl, title } from '$lib/data/meta';
-  import Giscus from '$lib/components/Giscus.svelte';
 
   export let data: { post: BlogPost };
   $: ({ post } = data);
@@ -250,7 +250,7 @@
 
     &.two {
       background: var(--color--secondary-shade);
-      border-radius: var (--radius-blob-2);
+      border-radius: var(--radius-blob-2);
       --size: 420px;
       top: max(600px, calc(45% - var(--size)));
       left: 70%;

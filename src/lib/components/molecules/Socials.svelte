@@ -3,7 +3,7 @@
 	import EmailIcon from '$lib/icons/socials/email.svelte';
 	import GitHubIcon from '$lib/icons/socials/github.svelte';
 	import LinkedInIcon from '$lib/icons/socials/linkedin.svelte';
-	import MastodonIcon from '$lib/icons/socials/mastodon.svelte';
+	// import MastodonIcon from '$lib/icons/socials/mastodon.svelte';
 	import TelegramIcon from '$lib/icons/socials/telegram.svelte';
 </script>
 

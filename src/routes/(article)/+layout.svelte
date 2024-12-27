@@ -94,14 +94,6 @@
 					<TableOfContents />
 				{/if}
 			</div>
-<div id="cusdis_thread"
-  data-host="https://cusdis.com"
-  data-app-id="20244026-0752-48c9-bbd3-97feb5f71f13"
-  data-page-id="{{ PAGE_ID }}"
-  data-page-url="{{ PAGE_URL }}"
-  data-page-title="{{ PAGE_TITLE }}"
-></div>
-<script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
 
 			<div class="container subscribe-container">
 				<SubscribeNewsletterCard />

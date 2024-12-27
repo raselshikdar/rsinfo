@@ -10,7 +10,6 @@
 	import SubscribeNewsletterCard from '$lib/components/molecules/SubscribeNewsletterCard.svelte';
 	import type BlogPost from '$lib/data/blog-posts/model';
 	import { keywords, image as metaImage, siteBaseUrl, title } from '$lib/data/meta';
-        import Giscus from '@giscus/svelte';
 
 	export let data: { post: BlogPost };
 	$: ({ post } = data);
@@ -95,24 +94,25 @@
 					<TableOfContents />
 				{/if}
 			</div>
-
-<div class="giscus mt-8">
-							<Giscus
-								id="comments"
-								repo="raselshikdar/rsinfo"
-								repoId="R_kgDOMEUUZA"
-								category="Comments"
-								categoryId="DIC_kwDOMEUUZM4ClhwM"
-								mapping="title"
-								term="Welcome to @giscus/react component!"
-								reactionsEnabled="1"
-								emitMetadata="1"
-								inputPosition="top"
-								theme={$theme === 'dark' ? 'dark' : $theme === 'auto' ? 'preferred_color_scheme' : 'light'}
-								lang={languageTag()}
-								loading="lazy"
-							/>
-						</div>
+<script id="dsq-count-scr" src="//rsblog-us-kg.disqus.com/count.js" async></script>
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://rsblog-us-kg.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
 
 			<div class="container subscribe-container">
 				<SubscribeNewsletterCard />

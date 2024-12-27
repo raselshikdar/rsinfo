@@ -9,12 +9,12 @@
 
 <div class="socials">
 	<a
-		href="https://mastodon.social/@raselshikdar"
+		href="https://t.me/rasel597"
 		target="_blank"
 		rel="me noreferrer"
-		title="Say Hi on Mastodon"
+		title="Say Hi on Telegram"
 	>
-		<MastodonIcon />
+		<TelegramIcon />
 	</a>
 	<a
 		href="https://github.com/raselshikdar"

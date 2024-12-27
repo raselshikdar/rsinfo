@@ -84,6 +84,7 @@
 				{#if showCardLayout}
 					<Card additionalClass="article-card">
 						<slot slot="content" />
+				 ```svelte
 					</Card>
 				{:else}
 					<div style="overflow: hidden;"><slot /></div>
@@ -107,7 +108,7 @@
 					reactionsEnabled="1"
 					emitMetadata="1"
 					inputPosition="top"
-					theme={$theme === 'dark' ? 'dark' : $theme === 'auto' ? 'preferred_color_scheme' : ' light'}
+					theme={$theme === 'dark' ? 'dark' : $theme === 'auto' ? 'preferred_color_scheme' : 'light'}
 					lang={languageTag()} <!-- Ensure this function returns a valid language code -->
 					loading="lazy"
 				/>
@@ -244,7 +245,7 @@
 		width: 100%;
 		background: rgba(var(--body-background-color-rgb), 0.7);
 		z-index: -1;
-		-webkit-backdrop-filter: blur(100px);
+		 -webkit-backdrop-filter: blur(100px);
 		backdrop-filter: blur(100px);
 	}
 	.blob {
@@ -266,7 +267,7 @@
 		&.two {
 			background: var(--color--secondary-shade);
 			border-radius: var(--radius-blob-2);
-			--size : 420px;
+			--size: 420px;
 			top: max(600px, calc(45% - var(--size)));
 			left: 70%;
 			animation-duration: 10s;

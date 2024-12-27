@@ -57,7 +57,7 @@
 			<meta property="og:image" content="{siteBaseUrl}{post.coverImage.src}" />
 		{:else if genericSocialImageUrl}
 			<meta property="og:image" content={genericSocialImageUrl} />
- {:else}
+		{:else}
 			<meta property="og:image" content={metaImage} />
 		{/if}
 	{/if}
@@ -107,7 +107,7 @@
 					reactionsEnabled="1"
 					emitMetadata="1"
 					inputPosition="top"
-					theme={$theme === 'dark' ? 'dark' : $theme === 'auto' ? 'preferred_color_scheme' : 'light'}
+					theme={$theme === 'dark' ? 'dark' : $theme === 'auto' ? 'preferred_color_scheme' : ' light'}
 					lang={languageTag()} <!-- Ensure this function returns a valid language code -->
 					loading="lazy"
 				/>
@@ -206,7 +206,7 @@
 
 		&.has-cover {
 			padding-top: 200px;
-			padding -inline: 0;
+			padding-inline: 0;
 
 			:global(.article-card) {
 				padding-inline: var(--inline-padding);
@@ -266,7 +266,7 @@
 		&.two {
 			background: var(--color--secondary-shade);
 			border-radius: var(--radius-blob-2);
-			--size: 420px;
+			--size : 420px;
 			top: max(600px, calc(45% - var(--size)));
 			left: 70%;
 			animation-duration: 10s;

@@ -84,7 +84,6 @@
 				{#if showCardLayout}
 					<Card additionalClass="article-card">
 						<slot slot="content" />
-				 ```svelte
 					</Card>
 				{:else}
 					<div style="overflow: hidden;"><slot /></div>
@@ -99,7 +98,7 @@
 			<div class="giscus mt-8">
 				<Giscus
 					id="comments"
-					repo="raselshikdar/rsinfo"
+					repo="raselshikdar/ rsinfo"
 					repoId="R_kgDOMEUUZA"
 					category="Comments"
 					categoryId="DIC_kwDOMEUUZM4ClhwM"
@@ -245,7 +244,7 @@
 		width: 100%;
 		background: rgba(var(--body-background-color-rgb), 0.7);
 		z-index: -1;
-		 -webkit-backdrop-filter: blur(100px);
+		-webkit-backdrop-filter: blur(100px);
 		backdrop-filter: blur(100px);
 	}
 	.blob {
@@ -254,7 +253,7 @@
 		animation-fill-mode: both;
 		background: var(--color--primary-shade);
 		z-index: -2;
-		--size: 400px;
+		--size:  400px;
 		height: var(--size);
 		width: var(--size);
 

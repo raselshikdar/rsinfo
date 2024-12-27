@@ -207,7 +207,7 @@
     gap: var(--inline-padding);
 
     &.card-layout {
-      padding-inline: var(--inline-padding);
+      padding-inline: var (--inline-padding);
 
       @include for-phone-only {
         padding-inline: 0;
@@ -238,19 +238,19 @@
     background: var(--color--primary-shade);
     z-index: -2;
     --size: 400px;
-    height: var(--size);
-    width: var(--size);
+    height: var (--size);
+    width: var (--size);
 
     &.one {
-      border-radius: var(--radius-blob-1);
+      border-radius: var (--radius-blob-1);
       top: max(600px, calc(15% - var(--size)));
       left: 10%;
       animation-duration: 10s;
     }
 
     &.two {
-      background: var(--color--secondary-shade);
-      border-radius: var(--radius-blob-2);
+      background: var (--color--secondary-shade);
+      border-radius: var (--radius-blob-2);
       --size: 420px;
       top: max(600px, calc(45% - var(--size)));
       left: 70%;
@@ -259,7 +259,7 @@
     }
 
     &.three {
-      border-radius: var(--radius-blob-3);
+      border-radius: var (--radius-blob-3);
       --size: 440px;
       top: max(700px, calc(75% - var(--size)));
       left: -10%;

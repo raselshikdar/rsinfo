@@ -88,24 +88,26 @@
 						<slot slot="content" />
 					</Card>
 				{:else}
-					<div style="overflow: hidden;"><slot /></div>
-<div class="giscus mt-8"></div>
-		<Giscus
-			id="comments"
-			repo="xKesvaL/kesval.com"
-			repoId="R_kgDOJLg2dQ"
-			category="Comments"
-			categoryId="DIC_kwDOJLg2dc4Cfd7h"
-			mapping="title"
-			term="Welcome to @giscus/react component!"
-			reactionsEnabled="1"
-			emitMetadata="1"
-			inputPosition="top"
-			theme={$theme === 'dark' ? 'dark' : $theme === 'auto' ? 'preferred_color_scheme' : 'light'}
-			lang={languageTag()}
-			loading="lazy"
-		/>
-	</div>
+					<div style="overflow: hidden;">
+						<slot />
+						<div class="giscus mt-8">
+							<Giscus
+								id="comments"
+								repo="xKesvaL/kesval.com"
+								repoId="R_kgDOJLg2dQ"
+								category="Comments"
+								categoryId="DIC_kwDOJLg2dc4Cfd7h"
+								mapping="title"
+								term="Welcome to @giscus/react component!"
+								reactionsEnabled="1"
+								emitMetadata="1"
+								inputPosition="top"
+								theme={$theme === 'dark' ? 'dark' : $theme === 'auto' ? 'preferred_color_scheme' : 'light'}
+								lang={languageTag()}
+								loading="lazy"
+							/>
+						</div>
+					</div>
 				{/if}
 
 				{#if post.showToc}
@@ -273,55 +275,55 @@
 			--size: 440px;
 			top: max(700px, calc(75% - var(--size)));
 			left: -10%;
-			animation-duration: 10s;
+			animation-duration: 12s;
 		}
 	}
 
-	.subscribe-container {
-		margin: 40px auto 20px;
-		max-width: 85ch;
-		box-sizing: border-box;
-		width: 100%;
-		padding-inline: 20px;
-
-		@include for-tablet-portrait-up {
-			padding-inline: 30px;
+	@keyframes float {
+		0% {
+			transform: translateY(0) translateX(0);
 		}
-
-		@include for-tablet-landscape-up {
-			padding-inline: 40px;
+		50% {
+			transform: translateY(-10px) translateX(10px);
 		}
-	}
-
-	.giscus-container {
-		margin: 40px auto;
-		max-width: 85ch;
-		box-sizing: border-box;
-		width: 100%;
-		padding-inline: 20px;
-
-		@include for-tablet-portrait-up {
-			padding-inline: 30px;
-		}
-
-		@include for-tablet-landscape-up {
-			padding-inline: 40px;
+		100% {
+			transform: translateY(0) translateX(0);
 		}
 	}
 
 	.container {
-		margin: 40px auto;
-		max-width: 85ch;
-		box-sizing: border-box;
+		margin: 0 auto;
 		width: 100%;
-		padding-inline: 20px;
+		padding-inline: var(--inline-padding);
+		margin-top: 40px;
 
 		@include for-tablet-portrait-up {
-			padding-inline: 30px;
+			max-width: 720px;
 		}
 
+		@include for-desktop-up {
+			max-width: 1080px;
+		}
+
+		.subscribe-container {
+			margin-top: 60px;
+		}
+	}
+
+	.giscus {
+		margin-top: 40px;
+
 		@include for-tablet-landscape-up {
-			padding-inline: 40px;
+			margin-top: 60px;
+		}
+	}
+
+	:global(.blob) {
+		filter: blur(120px);
+		opacity: 0.5;
+
+		@include for-tablet-landscape-up {
+			filter: blur(80px);
 		}
 	}
 </style>

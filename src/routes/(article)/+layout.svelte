@@ -1,3 +1,4 @@
+<!-- src/routes/(article)/+layout.svelte -->
 <script lang="ts">
   import Card from '$lib/components/atoms/Card.svelte';
   import Image from '$lib/components/atoms/Image.svelte';

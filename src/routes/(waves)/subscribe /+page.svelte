@@ -3,7 +3,7 @@
 	import SubscribeCard from '$lib/components/molecules/SubscribeCard.svelte';
 	import SubscribeNewsletterCard from '$lib/components/molecules/SubscribeNewsletterCard.svelte';
 	import RssIcon from '$lib/icons/rss.svelte';
-	import TelegramIcon from '$lib/icons/socials/telegram.svelte';
+	import MastodonIcon from '$lib/icons/socials/mastodon.svelte';
 </script>
 
 <div class="container subscribe-wrapper">
@@ -35,25 +35,25 @@
 			</Button>
 		</SubscribeCard>
 
-		<SubscribeCard title="Text me on Telegram">
-			<TelegramIcon slot="icon" />
+		<SubscribeCard title="Follow me on Mastodon">
+			<MastodonIcon slot="icon" />
 
 			<div class="card-content">
-				Whether you are on Telegram, you can follow my Telegram
-				account, where you can ask me for any kinds of assistance about this blog. A lot of
-				it is in Bengali and English, by the way.
+				Whether you are on Mastodon or another part of the Fediverse, you can follow my Mastodon
+				account, where I post stuff that's really different from what I usually post here. A lot of
+				it is in Portuguese, by the way.
 			</div>
 
 			<Button
 				additionalClass="button"
-				href="https:/t.me/rasel597"
+				href="https://mastodon.social/@raselshikdar"
 				target="_blank"
 				rel="me noreferrer"
 				slot="button"
 				color="secondary"
 			>
-				<Telegram slot="icon" />
-				Text on Telegram
+				<MastodonIcon slot="icon" />
+				Follow on Mastodon
 			</Button>
 		</SubscribeCard>
 

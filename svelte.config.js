@@ -14,13 +14,6 @@ const config = {
                     return;
                 }
             }
-        },
-        vite: {
-            resolve: {
-                alias: {
-                    '@inlang/paraglide-js': '@inlang/paraglide-js/dist'
-                }
-            }
         }
     },
     preprocess: [vitePreprocess()],

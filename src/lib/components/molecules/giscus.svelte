@@ -1,23 +1,32 @@
 <script lang="ts">
   import Giscus from '@giscus/svelte';
   import { theme } from '$lib/stores/theme';
-  import { onMount } from 'svelte';
+  import { onDestroy } from 'svelte';
 
   let currentTheme;
-  
-  // Subscribe to the theme store
-  theme.subscribe(value => {
-    currentTheme = value === 'dark' ? 'dark' : value === 'auto' ? 'preferred_color_scheme' : 'light';
+
+  // Subscribe to the theme store and update the current theme
+  const unsubscribe = theme.subscribe(value => {
+    currentTheme = value === 'dark' 
+      ? 'dark' 
+      : value === 'auto' 
+      ? 'preferred_color_scheme' 
+      : 'light';
+  });
+
+  // Cleanup the subscription on component destruction
+  onDestroy(() => {
+    unsubscribe();
   });
 </script>
 
 <div id="comments">
   <Giscus
     id="comments"
-    repo="raselshikdar/blog.rasel.us.kg"
-    repoId="R_kgDOMvaoPA"
+    repo="raselshikdar/rsinfo"
+    repoId="R_kgDOMEUUZA"
     category="General"
-    categoryId="DIC_kwDOMvaoPM4CiV6f"
+    categoryId="DIC_kwDOMEUUZM4ClhwM"
     mapping="pathname"
     strict="0"
     reactionsEnabled="1"

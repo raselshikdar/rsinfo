@@ -3,14 +3,13 @@ import path from 'path';
 
 /** @type {import('vite').UserConfig} */
 const config = {
-    plugins: [sveltekit()],
-    resolve: {
-        alias: {
-            $routes: path.resolve('./src/routes'),
-            $cms: path.resolve('./cms'),
-            '@inlang/paraglide-js': path.resolve('./node_modules/@inlang/paraglide-js/dist/runtime')
-        }
-    }
+	plugins: [sveltekit()],
+	resolve: {
+		alias: {
+			$routes: path.resolve('./src/routes'),
+			$cms: path.resolve('./cms')
+		}
+	}
 };
 
 export default config;

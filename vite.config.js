@@ -8,7 +8,7 @@ const config = {
         alias: {
             $routes: path.resolve('./src/routes'),
             $cms: path.resolve('./cms'),
-            '@inlang/paraglide-js': path.resolve('./node_modules/@inlang/paraglide-js/dist')
+            '@inlang/paraglide-js': path.resolve('./node_modules/@inlang/paraglide-js/dist/runtime')
         }
     }
 };

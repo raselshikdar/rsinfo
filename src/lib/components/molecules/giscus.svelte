@@ -1,20 +1,29 @@
-<script>
+<script lang="ts">
   import Giscus from '@giscus/svelte';
+  import { theme } from '$lib/stores/theme';
+  import { onMount } from 'svelte';
+
+  let currentTheme;
+  
+  // Subscribe to the theme store
+  theme.subscribe(value => {
+    currentTheme = value === 'dark' ? 'dark' : value === 'auto' ? 'preferred_color_scheme' : 'light';
+  });
 </script>
 
 <div id="comments">
   <Giscus
     id="comments"
-    repo="raselshikdar/rsinfo"
-    repoId="R_kgDOMEUUZA"
+    repo="raselshikdar/blog.rasel.us.kg"
+    repoId="R_kgDOMvaoPA"
     category="General"
-    categoryId="DIC_kwDOMEUUZM4ClhwM"
+    categoryId="DIC_kwDOMvaoPM4CiV6f"
     mapping="pathname"
     strict="0"
     reactionsEnabled="1"
     emitMetadata="0"
     inputPosition="top"
-    theme="light"
+    theme={currentTheme}
     lang="en"
     loading="lazy"
   />

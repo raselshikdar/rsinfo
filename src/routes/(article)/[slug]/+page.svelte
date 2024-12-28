@@ -6,7 +6,7 @@
     import Giscus from '@giscus/svelte';
     import { page } from '$app/stores';
     import { theme } from '$lib/stores/theme';
-    import { languageTag } from '$paraglide/runtime';
+    import { languageTag } from '@inlang/paraglide-js/runtime';
     
     export let data: { post: BlogPost };
     $: ({ post } = data);

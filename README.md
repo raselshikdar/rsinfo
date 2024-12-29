@@ -4,7 +4,7 @@ If you wanna use this site as a base for building your own, I highly recommend b
 
 # [blog.rasel.us.kg](https://blog.rasel.us.kg)
 
-This is my own personal website, built with SvelteKit. It also holds my own personal blog. The main credit to build this site for ©[Matt Fantinel](https://github.com/mattfantinel/fantinel.dev)
+This is my own personal website, built with SvelteKit. It also holds my own personal blog. The main credit to build this site for © [Matt Fantinel](https://github.com/matfantinel/fantinel.dev)
 
 <p align="center">
     <img src="static/images/projects/personal-website-transparent.png" alt="Screenshot" />

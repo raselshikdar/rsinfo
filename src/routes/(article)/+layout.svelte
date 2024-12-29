@@ -43,7 +43,6 @@
 <svelte:head>
 	{#if post}
 		<meta name="keywords" content={metaKeywords.join(', ')} />
-
 		<meta name="description" content={post.excerpt} />
 		<meta property="og:description" content={post.excerpt} />
 		<link rel="canonical" href="{siteBaseUrl}/{post.slug}" />
@@ -251,20 +250,6 @@
 			top: max(700px, calc(75% - var(--size)));
 			left: -10%;
 			animation-duration: 10s;
-		}
-	}
-
-	.subscribe-container {
-		margin: 40px auto 20px;
-		max-width: 85ch;
-		box-sizing: content-box;
-
-		:global(.subscribe-card) {
-			background: linear-gradient(
-				120deg,
-				rgba(var(--color--primary-rgb), 0.15) 0%,
-				rgba(var(--color--primary-rgb), 0.05) 100%
-			);
 		}
 	}
 

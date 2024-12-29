@@ -1,6 +1,6 @@
 # Forking/Public Template
 
-If you wanna use this site as a base for building your own, I highly recommend basing it off [Matt's public SvelteKit blog template](https://github.com/matfantinel/sveltekit-static-blog-template) instead! It is better documented and there is way less stuff to remove.
+If you wanna use this site as a base for building your own, I highly recommend basing it off [Matt's public SvelteKit blog template](https://github.com/matfantinel/sveltekit-static-blog-template) instead! (also built by [Matt Fantinel](https://github.com/matfantinel/)) It is better documented and there is way less stuff to remove.
 
 # [blog.rasel.us.kg](https://blog.rasel.us.kg)
 

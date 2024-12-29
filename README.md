@@ -1,10 +1,10 @@
 # Forking/Public Template
 
-If you wanna use this site as a base for building your own, I highly recommend basing it off [Matt's public SvelteKit blog template](https://github.com/matfantinel/sveltekit-static-blog-template) instead! (also built by Matt Fantinel). It is better documented and there is way less stuff to remove.
+If you wanna use this site as a base for building your own, I highly recommend basing it off [Matt's public SvelteKit blog template](https://github.com/matfantinel/sveltekit-static-blog-template) instead!. It is better documented and there is way less stuff to remove.
 
 # [blog.rasel.us.kg](https://blog.rasel.us.kg)
 
-This is my own personal website, built with SvelteKit. It also holds my own personal blog. The main credit to build this site is for © [Matt Fantinel](https://github.com/matfantinel/fantinel.dev)
+This is my own personal website, built with SvelteKit. It also holds my own personal blog. All credit for building and presenting the website so beautifully goes to © [Matt Fantinel](https://github.com/matfantinel/fantinel.dev)
 
 <p align="center">
     <img src="static/images/projects/personal-website-transparent.png" alt="Screenshot" />

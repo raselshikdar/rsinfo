@@ -7,7 +7,6 @@
 	import TableOfContents from '$lib/components/organisms/TableOfContents.svelte';
 	import dateformat from 'dateformat';
 
-	import SubscribeNewsletterCard from '$lib/components/molecules/SubscribeNewsletterCard.svelte';
 	import type BlogPost from '$lib/data/blog-posts/model';
 	import { keywords, image as metaImage, siteBaseUrl, title } from '$lib/data/meta';
 
@@ -93,10 +92,6 @@
 				{#if post.showToc}
 					<TableOfContents />
 				{/if}
-			</div>
-
-			<div class="container subscribe-container">
-				<SubscribeNewsletterCard />
 			</div>
 
 			{#if post.relatedPosts && post.relatedPosts.length > 0}

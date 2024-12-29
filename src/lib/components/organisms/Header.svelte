@@ -18,8 +18,8 @@
 				<HamburgerMenu
 					links={[
 						{ href: '/blog', text: 'Blog' },
-						{ href: '/subscribe', text: 'Subscribe' }
-						// { href: '/resume', text: 'Resume' }
+						{ href: '/resume', text: 'Resume' }
+						// { href: '/subscribe', text: 'Subscribe' }
 					]}
 				/>
 			</div>

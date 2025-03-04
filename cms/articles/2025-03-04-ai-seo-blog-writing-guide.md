@@ -1,18 +1,18 @@
 ---
-title: "AI ব্যবহার করে এসইও-ফ্রেন্ডলি ব্লগ লেখার সেরা উপায়: EEAT গাইডলাইন"
+title: 'AI ব্যবহার করে এসইও-ফ্রেন্ডলি ব্লগ লেখার সেরা উপায়: EEAT গাইডলাইন'
 slug: ai-seo-blog-writing-guide
 excerpt: |
   AI-এর সহায়তায় অভিজ্ঞতা, কর্তৃত্ব ও নির্ভরযোগ্যতা (EEAT Guidelines) অনুসরণ
   করে এসইও-ফ্রেন্ডলি ব্লগ লেখার সহজ ও কার্যকর গাইড।
-coverImage: "/images/posts/2025-03-04-ai-seo-blog-writing-guide/cover.avif"
-coverImageAlt: "AI ব্যবহার করে এসইও-ফ্রেন্ডলি ব্লগ লেখার সেরা উপায়: EEAT গাইডলাইন"
+coverImage: /images/posts/2025-03-04-ai-seo-blog-writing-guide/cover.avif
+coverImageAlt: 'AI ব্যবহার করে এসইও-ফ্রেন্ডলি ব্লগ লেখার সেরা উপায়: EEAT গাইডলাইন'
 showImage: true
 showToc: true
 categories:
-  - "Artificial Intelligence"
-  - "Content Writing"
-  - "Tutorials"
-  - "AI"
+  - Artificial Intelligence
+  - Content Writing
+  - Tutorials
+  - AI
 date: 2025-03-04T09:58:06.076Z
 ---
 
@@ -209,4 +209,4 @@ AI এবং আধুনিক SEO কৌশল আপনার ব্লগক
 * প্রশ্ন: কিভাবে নিবন্ধে অভিজ্ঞতা ও কর্তৃত্ব প্রদর্শন করা যায়?
   উত্তর: ব্যক্তিগত অভিজ্ঞতা, বিশেষজ্ঞ মতামত, সঠিক তথ্যসূত্র ও গবেষণার ফলাফল শেয়ার করে নিবন্ধে অভিজ্ঞতা ও কর্তৃত্ব স্পষ্টভাবে প্রকাশ করা যায়।
 
-#### Post Original Source: [iT Dorpon | আইটি দর্পণ](https://www.itdorpon.news)
+#### Original Article Source: [iT Dorpon | আইটি দর্পণ](https://www.itdorpon.news)

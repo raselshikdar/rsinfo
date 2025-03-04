@@ -10,6 +10,9 @@ showImage: true
 showToc: true
 categories:
   - Tutorials
+  - AI
+  - Artificial Intelligence
+  - Content Writing
 date: 2025-03-04T09:58:06.076Z
 ---
 

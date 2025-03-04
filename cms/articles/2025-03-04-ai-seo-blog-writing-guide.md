@@ -4,7 +4,7 @@ slug: ai-seo-blog-writing-guide
 excerpt: >-
   AI-এর সহায়তায় অভিজ্ঞতা, কর্তৃত্ব ও নির্ভরযোগ্যতা (EEAT Guidelines) অনুসরণ
   করে এসইও-ফ্রেন্ডলি ব্লগ লেখার সহজ ও কার্যকর গাইড।
-coverImage: /images/posts/2025-03-04-ai-seo-blog-writing-guide/cover.avif
+coverImage: /images/2025-03-04-ai-seo-blog-writing-guide/cover.avif
 coverImageAlt: ai-seo-blog-writing-guide
 showImage: true
 showToc: true

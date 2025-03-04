@@ -5,7 +5,7 @@ excerpt: >-
   AI-এর সহায়তায় অভিজ্ঞতা, কর্তৃত্ব ও নির্ভরযোগ্যতা (EEAT Guidelines) অনুসরণ
   করে এসইও-ফ্রেন্ডলি ব্লগ লেখার সহজ ও কার্যকর গাইড।
 coverImage: /images/cover-1.avif
-coverImageAlt: ai-seo-blog-writing-guide
+coverImageAlt: AI ব্যবহার করে এসইও-ফ্রেন্ডলি ব্লগ লেখার সেরা উপায়: EEAT গাইডলাইন
 showImage: true
 showToc: true
 categories:

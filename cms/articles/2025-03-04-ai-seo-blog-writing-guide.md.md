@@ -4,7 +4,7 @@ slug: ai-seo-blog-writing-guide
 excerpt: >-
   AI-এর সহায়তায় অভিজ্ঞতা, কর্তৃত্ব ও নির্ভরযোগ্যতা (EEAT Guidelines) অনুসরণ
   করে এসইও-ফ্রেন্ডলি ব্লগ লেখার সহজ ও কার্যকর গাইড।
-coverImage: /images/cover-1.avif
+coverImage: /images/posts/2025-03-04-ai-seo-blog-writing-guide/cover.avif
 coverImageAlt: AI ব্যবহার করে এসইও-ফ্রেন্ডলি ব্লগ লেখার সেরা উপায়
 showImage: true
 showToc: true
@@ -15,10 +15,6 @@ categories:
   - Content Writing
 date: 2025-03-04T09:58:06.076Z
 ---
-
-![](/images/cover-1.avif)
-
-Image generated using [DALL·E Free](https://draft.blogger.com/blog/post/edit/3230920714895069538/1869228039198341912?hl=en#).
 
 ## 1. ভূমিকা (Introduction)
 
